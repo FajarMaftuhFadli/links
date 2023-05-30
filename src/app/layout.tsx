@@ -17,7 +17,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="bg-base">
+    <html lang="en" className="select-none bg-base">
       <body className="relative mx-auto max-w-xl bg-crust leading-tight text-text ring-1 ring-blue/70">
         <Header name="Fajar" linkCount={links.length} />
         <Hero />
