@@ -1,11 +1,11 @@
-export interface Item {
+export interface Links {
   title: string;
   link: string;
   icon: string;
   tags: string[];
 }
 
-export const items: Item[] = [
+export const links: Links[] = [
   {
     title: 'LinkedIn',
     link: 'https://www.linkedin.com/in/fajarmaftuhfadli/',

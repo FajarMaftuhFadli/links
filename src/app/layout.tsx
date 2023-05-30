@@ -4,7 +4,7 @@ import Header from '@/components/header';
 import Hero from '@/components/hero';
 import Nav from '@/components/nav';
 import Profile from '@/components/profile';
-import { items } from '@/data';
+import { links } from '@/data';
 
 export const metadata = {
   title: 'Fajar links',
@@ -18,8 +18,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="bg-crust leading-4 text-text">
-        <Header name="Fajar" linkCount={items.length} />
+      <body className="bg-crust leading-tight text-text">
+        <Header name="Fajar" linkCount={links.length} />
         <Hero />
         <Profile />
         <Nav />

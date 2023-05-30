@@ -1,3 +1,5 @@
+import ArrowPath from '@/icons/arrow-path';
+import MapPin from '@/icons/map-pin';
 import Image from 'next/image';
 
 export default function Profile() {
@@ -19,13 +21,19 @@ export default function Profile() {
           <h1 className="text-2xl font-bold">Fajar Maftuh Fadli</h1>
           <span className="font-light text-blue/70">@froggologies</span>
         </div>
-        <span className="leading-tight">
+        <span className="">
           Welcome, traveler. This one is a frog, hailing from the misty swamps
           of Black Marsh. 🐸 Croak! May the Hist guide your path!
         </span>
         <div className="flex flex-col font-light text-blue/70">
-          <span>Middle Earth</span>
-          <span>Last updated 30 May 2023</span>
+          <div className="flex flex-row items-center gap-1">
+            <MapPin className="h-4 w-4" />
+            <span>Middle Earth</span>
+          </div>
+          <div className="flex flex-row items-center gap-1">
+            <ArrowPath className="h-4 w-4" />
+            <span>Last updated 30 May 2023</span>
+          </div>
         </div>
         <div className="text-sm">
           <span className="font-semibold">10</span>{' '}
