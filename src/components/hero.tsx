@@ -4,7 +4,7 @@ export default function Hero() {
     <div className="relative aspect-[100/33] w-full bg-blue-500">
       <Image
         className="object-cover"
-        src="/romb.png"
+        src="/hero.png"
         alt="Header image"
         fill
         priority
