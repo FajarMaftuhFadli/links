@@ -25,6 +25,30 @@ export const items: Item[] = [
     tags: ['tag1', 'tag2'],
   },
   {
+    title: 'Twitter',
+    link: 'https://twitter.com/froggologies',
+    icon: 'icon4.png',
+    tags: ['tag1', 'tag2'],
+  },
+  {
+    title: 'Instagram',
+    link: 'https://www.instagram.com/fajarmaftuhfadli/',
+    icon: 'icon3.png',
+    tags: ['tag1', 'tag2'],
+  },
+  {
+    title: 'Instagram',
+    link: 'https://www.instagram.com/fajarmaftuhfadli/',
+    icon: 'icon3.png',
+    tags: ['tag1', 'tag2'],
+  },
+  {
+    title: 'Instagram',
+    link: 'https://www.instagram.com/fajarmaftuhfadli/',
+    icon: 'icon3.png',
+    tags: ['tag1', 'tag2'],
+  },
+  {
     title: 'Instagram',
     link: 'https://www.instagram.com/fajarmaftuhfadli/',
     icon: 'icon3.png',
