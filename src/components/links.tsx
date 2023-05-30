@@ -11,7 +11,7 @@ export default function Links() {
           target="_blank"
           rel="noreferrer"
         >
-          <div className="h-12 w-12 min-w-[3rem] rounded-md bg-mantle"></div>
+          <div className="h-12 w-12 min-w-[3rem] rounded-md bg-base"></div>
           <div className="flex flex-col gap-1">
             <div className="flex items-center gap-1">
               <span className="text-lg font-semibold">{link.title}</span>
