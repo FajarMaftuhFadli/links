@@ -2,7 +2,7 @@ import { links } from '@/data';
 
 export default function Links() {
   return (
-    <section className="flex w-full flex-col gap-4">
+    <section className="flex w-full flex-col">
       {links.map((link, index) => (
         <a
           className="flex gap-4 border-b-[1px] border-blue/70 p-4"

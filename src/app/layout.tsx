@@ -18,7 +18,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="bg-crust leading-tight text-text">
+      <body className="relative bg-crust leading-tight text-text">
         <Header name="Fajar" linkCount={links.length} />
         <Hero />
         <Profile />
