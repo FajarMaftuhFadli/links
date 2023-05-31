@@ -1,10 +1,14 @@
 import Links from '@/components/links';
 import Top from '@/components/top';
 
-export default function Home() {
+import { getLinks } from '@/sanity/sanity-utils';
+
+export default async function Home() {
+  const links = await getLinks();
+  console.log(links);
   return (
     <main>
-      <Links />
+      <Links links={links} />
       <Top />
     </main>
   );
