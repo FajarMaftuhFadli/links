@@ -42,7 +42,7 @@ export default function Header({ name, linkCount }: HeaderProps) {
             <ArrowLeft className="h-full w-full" />
           </button>
           <div
-            className={`flex select-none flex-col transition-opacity duration-500 ${
+            className={`flex flex-col transition-opacity duration-500 ${
               scrollPosition < 155 ? 'opacity-0' : '!opacity-100'
             }`}
           >
