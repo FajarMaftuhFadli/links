@@ -4,7 +4,7 @@ import Image from 'next/image';
 
 export default function Profile() {
   return (
-    <div className="">
+    <div className="bg-crust">
       <div className="relative flex flex-col items-start justify-end gap-4 px-4 pb-4 pt-16">
         <div className="absolute left-4 top-0 h-24 w-24 -translate-y-1/2 overflow-hidden rounded-full bg-base ring-4 ring-crust">
           <div className="relative h-full w-full">
