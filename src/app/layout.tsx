@@ -4,7 +4,7 @@ import Header from '@/components/header';
 import Hero from '@/components/hero';
 import Nav from '@/components/nav';
 import Profile from '@/components/profile';
-import { links } from '@/data';
+// import { links } from '@/data';
 
 export const metadata = {
   title: 'Fajar links',
@@ -20,7 +20,7 @@ export default function RootLayout({
     <html lang="en" className="select-none scroll-smooth bg-base">
       <body className="relative mx-auto max-w-xl bg-crust leading-tight text-text ring-1 ring-blue/70">
         <span id="top"></span>
-        <Header name="Fajar" linkCount={links.length} />
+        <Header name="Fajar" linkCount={10} />
         <Hero />
         <Profile />
         <Nav />
