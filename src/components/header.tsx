@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 
 import ArrowLeft from '@/icons/arrow-left';
 import ElipsisVertical from '@/icons/elipsis-vertical';
+import Link from 'next/link';
 
 export interface HeaderProps {
   name: string;
@@ -43,7 +44,7 @@ export default function Header({ name, linkCount }: HeaderProps) {
           </button>
           <div
             className={`flex flex-col transition-opacity duration-500 ${
-              scrollPosition < 155 ? 'opacity-0' : '!opacity-100'
+              scrollPosition < 140 ? 'opacity-0' : '!opacity-100'
             }`}
           >
             <span className="text-lg font-bold">{name}</span>
@@ -53,13 +54,12 @@ export default function Header({ name, linkCount }: HeaderProps) {
           </div>
           {/* {scrollPosition} */}
         </div>
-        <button
-          type="button"
-          title="option"
-          className="h-8 w-8 rounded-full bg-mantle/80 p-1"
+        <Link
+          href="/studio"
+          className="h-8 w-8 cursor-default rounded-full bg-mantle/80 p-1 shadow-md transition-colors hover:bg-base"
         >
           <ElipsisVertical className="h-full w-full" />
-        </button>
+        </Link>
       </div>
     </div>
   );
