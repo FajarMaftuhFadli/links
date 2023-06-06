@@ -1,17 +1,15 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-
 import ArrowLeft from '@/icons/arrow-left';
 import ElipsisVertical from '@/icons/elipsis-vertical';
 import Link from 'next/link';
 
 export interface HeaderProps {
   name: string;
-  linkCount: number;
 }
 
-export default function Header({ name, linkCount }: HeaderProps) {
+export default function Header({ name }: HeaderProps) {
   const [scrollPosition, setScrollPosition] = useState(0);
   const handleScroll = () => {
     const position = window.pageYOffset;
@@ -20,10 +18,9 @@ export default function Header({ name, linkCount }: HeaderProps) {
 
   useEffect(() => {
     window.addEventListener('scroll', handleScroll, { passive: true });
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
+    if (typeof window !== 'undefined') {
+      setScrollPosition(window.pageYOffset);
+    }
   }, []);
 
   return (
@@ -44,13 +41,11 @@ export default function Header({ name, linkCount }: HeaderProps) {
           </button>
           <div
             className={`flex flex-col transition-opacity duration-500 ${
-              scrollPosition < 140 ? 'opacity-0' : '!opacity-100'
+              scrollPosition < 140 ? 'opacity-100' : '!opacity-100'
             }`}
           >
             <span className="text-lg font-bold">{name}</span>
-            <span className="text-sm font-light text-blue/70">
-              {linkCount} Links
-            </span>
+            <span className="text-sm font-light text-blue/70">{0} Links</span>
           </div>
           {/* {scrollPosition} */}
         </div>

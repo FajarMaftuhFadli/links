@@ -2,7 +2,7 @@ import ArrowPath from '@/icons/arrow-path';
 import MapPin from '@/icons/map-pin';
 import Image from 'next/image';
 
-export default function Profile() {
+export default function Profile({ countedLink }: { countedLink: number }) {
   return (
     <div className="bg-crust">
       <div className="relative flex flex-col items-start justify-end gap-4 px-4 pb-4 pt-16">
@@ -36,7 +36,7 @@ export default function Profile() {
           </div>
         </div>
         <div className="text-sm">
-          <span className="font-semibold">10</span>{' '}
+          <span className="font-semibold">{countedLink}</span>{' '}
           <span className="font-light text-blue/70">Links</span>
         </div>
       </div>
