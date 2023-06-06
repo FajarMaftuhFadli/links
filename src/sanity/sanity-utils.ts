@@ -24,8 +24,10 @@ export async function getLinks() {
   );
 }
 
-export async function countLinks() {
+export async function getData() {
   const client = createClient(clientID);
-
-  return client.fetch(groq`count(*[_type == 'link'])`);
+  const data = client.fetch(
+    groq`*[_type == "link"] | order(_updatedAt desc){_updatedAt}`
+  );
+  return data;
 }

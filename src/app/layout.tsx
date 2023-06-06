@@ -4,7 +4,7 @@ import Hero from '@/components/hero';
 import Nav from '@/components/nav';
 import Profile from '@/components/profile';
 
-import { countLinks } from '@/sanity/sanity-utils';
+import { getData } from '@/sanity/sanity-utils';
 
 export const metadata = {
   title: 'Fajar links',
@@ -16,14 +16,17 @@ export default async function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const countedLink = await countLinks();
+  const datas = await getData();
 
   return (
     <html lang="en" className="select-none scroll-smooth bg-mantle">
       <body className="relative mx-auto max-w-xl leading-tight text-text">
         <span id="top"></span>
         <Hero />
-        <Profile countedLink={countedLink} />
+        <Profile
+          countedLink={datas.length}
+          lastUpdateDate={datas[0]._updatedAt}
+        />
         <Nav />
         {children}
       </body>

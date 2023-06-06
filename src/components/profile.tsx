@@ -1,8 +1,36 @@
+'use client';
 import ArrowPath from '@/icons/arrow-path';
 import MapPin from '@/icons/map-pin';
+import moment from 'moment';
 import Image from 'next/image';
+import { useEffect, useState } from 'react';
 
-export default function Profile({ countedLink }: { countedLink: number }) {
+export default function Profile({
+  countedLink,
+  lastUpdateDate,
+}: {
+  countedLink: number;
+  lastUpdateDate: string;
+}) {
+  const [greeting, setGreeting] = useState('Welcome');
+
+  useEffect(() => {
+    const currentTime = moment();
+    const hour = currentTime.hour();
+
+    let greetingText = '';
+
+    if (hour >= 5 && hour < 12) {
+      greetingText = 'Good morning 🌅';
+    } else if (hour >= 12 && hour < 18) {
+      greetingText = 'Good afternoon 🌇';
+    } else {
+      greetingText = 'Good evening 🌃';
+    }
+
+    setGreeting(greetingText);
+  }, []);
+
   return (
     <div className="bg-crust">
       <div className="relative flex flex-col items-start justify-end gap-4 px-4 pb-4 pt-16">
@@ -22,7 +50,7 @@ export default function Profile({ countedLink }: { countedLink: number }) {
           <span className="font-light text-blue/70">@froggologies</span>
         </div>
         <span className="">
-          Welcome, traveler. This one is a frog, hailing from the misty swamps
+          {greeting} traveler. This one is a frog, hailing from the misty swamps
           of Black Marsh. 🐸 Croak! May the Hist guide your path!
         </span>
         <div className="flex flex-col font-light text-blue/70">
@@ -32,7 +60,9 @@ export default function Profile({ countedLink }: { countedLink: number }) {
           </div>
           <div className="flex flex-row items-center gap-1">
             <ArrowPath className="h-4 w-4" />
-            <span>Last updated 30 May 2023</span>
+            <span>
+              Last updated {moment(lastUpdateDate).format('DD MMMM YYYY')}
+            </span>
           </div>
         </div>
         <div className="text-sm">
