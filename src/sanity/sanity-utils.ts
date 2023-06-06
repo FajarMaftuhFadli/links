@@ -10,7 +10,7 @@ export async function getLinks() {
   const client = createClient(clientID);
 
   return client.fetch(
-    groq`*[_type == "link"]{
+    groq`*[_type == "link"] | order(pinned asc, _updatedAt desc){
         _id,
         _createdAt,
         name,
