@@ -16,7 +16,7 @@ export async function getLinks() {
         name,
         url,
         username,
-        icon,
+        "icon": icon.asset->url,
         description,
         pinned,
         tags,

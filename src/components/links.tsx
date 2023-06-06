@@ -1,4 +1,5 @@
 import { Link } from '@/types/linkModel';
+import Image from 'next/image';
 
 export default function Links({ links }: { links: Link[] }) {
   return (
@@ -11,7 +12,9 @@ export default function Links({ links }: { links: Link[] }) {
           target="_blank"
           rel="noreferrer"
         >
-          <div className="h-12 w-12 min-w-[3rem] rounded-md bg-base"></div>
+          <div className="h-12 w-12 min-w-[3rem] overflow-hidden rounded-md bg-base">
+            <Image src={link.icon} alt={link.name} width={400} height={400} />
+          </div>
           <div className="flex flex-col gap-1">
             <div className="flex cursor-pointer items-center gap-1">
               <span className="text-lg font-semibold">{link.name}</span>

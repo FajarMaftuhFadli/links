@@ -4,7 +4,7 @@ export interface Link {
   url: string;
   username: string;
   description: string;
-  image: string;
+  icon: string;
   pinned: boolean;
   tags: Array<string>;
 }
