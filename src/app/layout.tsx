@@ -1,3 +1,4 @@
+import Header from '@/components/header';
 import './globals.css';
 
 import Hero from '@/components/hero';
@@ -22,6 +23,7 @@ export default async function RootLayout({
     <html lang="en" className="select-none scroll-smooth bg-mantle">
       <body className="relative mx-auto max-w-xl leading-tight text-text">
         <span id="top"></span>
+        <Header name="Fajar" />
         <Hero />
         <Profile
           countedLink={datas.length}

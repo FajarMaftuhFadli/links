@@ -10,7 +10,7 @@ export default function Links({ links }: { links: Link[] }) {
           key={link._id}
           href={link.url}
           target="_blank"
-          rel="noreferrer"
+          rel="noreferrer noopener"
         >
           <div className="h-12 w-12 min-w-[3rem] overflow-hidden rounded-md bg-base">
             <Image src={link.icon} alt={link.name} width={400} height={400} />

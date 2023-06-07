@@ -23,7 +23,7 @@ export default function Top() {
     <a
       href="#top"
       title="Back to top"
-      className={`fixed bottom-4 right-4 flex h-14 w-14 cursor-default items-center justify-center  rounded-full bg-[#1DA1F2] shadow-md transition-all duration-500 hover:-translate-y-2 hover:bg-[#1C8FEA] ${
+      className={`fixed bottom-4 right-4 flex h-14 w-14 cursor-default items-center justify-center  rounded-full bg-[#1DA1F2] shadow-md transition-all hover:-translate-y-2 hover:bg-[#1C8FEA] ${
         scrollPosition > 100 ? 'opacity-100' : 'opacity-0'
       }`}
     >
