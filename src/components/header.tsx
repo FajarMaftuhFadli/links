@@ -29,7 +29,7 @@ function OptionButton() {
         >
           <button
             type="button"
-            className="cursor-not-allowed whitespace-nowrap rounded-md p-2 text-text/60"
+            className="pointer-events-none whitespace-nowrap rounded-md p-2 text-text/60"
           >
             Change theme
           </button>
@@ -42,7 +42,7 @@ function OptionButton() {
             Source Code
           </a>
           <Link
-            className="cursor-not-allowed rounded-md p-2 text-text/60"
+            className="pointer-events-none rounded-md p-2 text-text/60"
             href="/studio"
           >
             Admin
