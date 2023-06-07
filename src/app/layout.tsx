@@ -21,17 +21,15 @@ export default async function RootLayout({
 
   return (
     <html lang="en" className="select-none scroll-smooth bg-crust">
-      <body className="relative mx-auto max-w-xl leading-tight text-text">
+      <body className="relative mx-auto max-w-xl leading-tight text-text before:fixed before:bottom-0 before:top-0 before:mx-auto before:block before:w-full before:max-w-xl before:ring-1 before:ring-blue/30">
         <span id="top"></span>
-        <div className="border-x-[1px] border-blue/30">
-          <Header name="Fajar" />
-          <Hero />
-          <Profile
-            countedLink={datas.length}
-            lastUpdateDate={datas[0]._updatedAt}
-          />
-          <Nav />
-        </div>
+        <Header name="Fajar" />
+        <Hero />
+        <Profile
+          countedLink={datas.length}
+          lastUpdateDate={datas[0]._updatedAt}
+        />
+        <Nav />
         {children}
       </body>
     </html>

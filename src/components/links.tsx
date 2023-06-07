@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 export default function Links({ links }: { links: Link[] }) {
   return (
-    <section className="flex w-full flex-col border-x-[1px] border-blue/30 bg-crust">
+    <section className="flex w-full flex-col bg-crust">
       {links.map((link: Link) => (
         <a
           className="flex cursor-default gap-4 border-b-[1px] border-blue/30 p-4"
