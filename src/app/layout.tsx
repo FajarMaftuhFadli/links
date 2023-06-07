@@ -20,16 +20,18 @@ export default async function RootLayout({
   const datas = await getData();
 
   return (
-    <html lang="en" className="select-none scroll-smooth bg-mantle">
+    <html lang="en" className="select-none scroll-smooth bg-crust">
       <body className="relative mx-auto max-w-xl leading-tight text-text">
         <span id="top"></span>
-        <Header name="Fajar" />
-        <Hero />
-        <Profile
-          countedLink={datas.length}
-          lastUpdateDate={datas[0]._updatedAt}
-        />
-        <Nav />
+        <div className="border-x-[1px] border-blue/30">
+          <Header name="Fajar" />
+          <Hero />
+          <Profile
+            countedLink={datas.length}
+            lastUpdateDate={datas[0]._updatedAt}
+          />
+          <Nav />
+        </div>
         {children}
       </body>
     </html>
