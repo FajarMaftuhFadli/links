@@ -21,7 +21,7 @@ export default async function RootLayout({
 
   return (
     <html lang="en" className="select-none scroll-smooth bg-crust">
-      <body className="relative mx-auto max-w-xl leading-tight text-text before:fixed before:bottom-0 before:top-0 before:-z-10 before:mx-auto before:block before:w-full before:max-w-xl before:bg-blue before:ring-1 before:ring-blue/20">
+      <body className="relative mx-auto max-w-xl leading-tight text-text before:fixed before:bottom-0 before:top-0 before:-z-10 before:mx-auto before:block before:w-full before:max-w-xl before:ring-1 before:ring-blue/20">
         <span id="top"></span>
         <Header name="Fajar" />
         <Hero />
