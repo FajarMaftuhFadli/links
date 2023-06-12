@@ -40,7 +40,8 @@ export default function Profile({
               className="object-cover"
               src="/profile.png"
               alt="Profile image"
-              fill
+              width={256}
+              height={256}
               priority
             />
           </div>
