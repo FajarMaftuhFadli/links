@@ -13,6 +13,7 @@ export async function getLinks() {
     groq`*[_type == "link"] | order(pinned asc, _updatedAt desc){
         _id,
         _createdAt,
+        _updatedAt,
         name,
         url,
         username,

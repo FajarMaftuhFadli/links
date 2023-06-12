@@ -7,4 +7,5 @@ export interface Link {
   icon: string;
   pinned: boolean;
   tags: Array<string>;
+  _updatedAt: string;
 }
