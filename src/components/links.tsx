@@ -49,7 +49,7 @@ export default function Links({ links }: { links: Link[] }) {
               </span>
             </div>
           </div>
-          <div className="flex px-14 text-sm font-light text-blue/80">
+          <div className="flex px-16 text-sm font-light text-blue/80">
             <span className="flex w-full gap-1 hover:text-blue">
               <ChatBubbleOvalLeft className="h-5 w-5" />
               {randomIntFromInterval(5, 99)}
