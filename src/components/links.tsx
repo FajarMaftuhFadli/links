@@ -7,7 +7,7 @@ export default function Links({ links }: { links: Link[] }) {
     <section className="flex w-full flex-col bg-crust">
       {links.map((link: Link) => (
         <a
-          className="cursor-default border-b-[1px] border-blue/30 px-4 py-2"
+          className="cursor-default border-b-[1px] border-blue/20 px-4 py-2"
           key={link._id}
           href={link.url}
           target="_blank"
