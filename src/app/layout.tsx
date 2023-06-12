@@ -23,12 +23,9 @@ export default async function RootLayout({
     <html lang="en" className="select-none scroll-smooth bg-crust">
       <body className="relative mx-auto max-w-xl leading-tight text-text before:fixed before:bottom-0 before:top-0 before:-z-10 before:mx-auto before:block before:w-full before:max-w-xl before:ring-1 before:ring-blue/20">
         <span id="top"></span>
-        <Header name="Fajar" />
+        <Header name="Fajar" countedLink={datas.length} />
         <Hero />
-        <Profile
-          countedLink={datas.length}
-          lastUpdateDate={datas[0]._updatedAt}
-        />
+        <Profile lastUpdateDate={datas[0]._updatedAt} />
         <Nav />
         {children}
       </body>

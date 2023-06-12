@@ -8,6 +8,7 @@ import { exit } from 'process';
 
 export interface HeaderProps {
   name: string;
+  countedLink: number;
 }
 
 function OptionButton() {
@@ -54,7 +55,7 @@ function OptionButton() {
   );
 }
 
-export default function Header({ name }: HeaderProps) {
+export default function Header({ name, countedLink }: HeaderProps) {
   const [scrollPosition, setScrollPosition] = useState(0);
   const handleScroll = () => {
     const position = window.scrollY;
@@ -94,7 +95,9 @@ export default function Header({ name }: HeaderProps) {
             }`}
           >
             <span className="text-lg font-bold">{name}</span>
-            <span className="text-sm font-light text-blue/80">{0} Links</span>
+            <span className="text-sm font-light text-blue/80">
+              {countedLink} Links
+            </span>
           </div>
           {/* {scrollPosition} */}
         </div>

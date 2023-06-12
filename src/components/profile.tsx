@@ -6,10 +6,8 @@ import Image from 'next/image';
 import { useEffect, useState } from 'react';
 
 export default function Profile({
-  countedLink,
   lastUpdateDate,
 }: {
-  countedLink: number;
   lastUpdateDate: string;
 }) {
   const [greeting, setGreeting] = useState('Welcome');
@@ -30,6 +28,10 @@ export default function Profile({
 
     setGreeting(greetingText);
   }, []);
+
+  const randomIntFromInterval = (min: number, max: number) => {
+    return Math.floor(Math.random() * (max - min + 1) + min);
+  };
 
   return (
     <div className="bg-crust">
@@ -66,9 +68,19 @@ export default function Profile({
             </span>
           </div>
         </div>
-        <div className="text-sm">
-          <span className="font-semibold">{countedLink}</span>{' '}
-          <span className="font-light text-blue/80">Links</span>
+        <div className="flex gap-4">
+          <div className="text-sm">
+            <span className="font-semibold">
+              {randomIntFromInterval(10, 99)}
+            </span>{' '}
+            <span className="font-light text-blue/80">Following</span>
+          </div>
+          <div className="text-sm">
+            <span className="font-semibold">
+              {randomIntFromInterval(10, 99)}
+            </span>{' '}
+            <span className="font-light text-blue/80">Follower</span>
+          </div>
         </div>
       </div>
     </div>
