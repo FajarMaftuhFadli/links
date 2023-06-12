@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import ArrowLeft from '@/icons/arrow-left';
 import ElipsisVertical from '@/icons/elipsis-vertical';
 import Link from 'next/link';
+import { exit } from 'process';
 
 export interface HeaderProps {
   name: string;
@@ -56,15 +57,19 @@ function OptionButton() {
 export default function Header({ name }: HeaderProps) {
   const [scrollPosition, setScrollPosition] = useState(0);
   const handleScroll = () => {
-    const position = window.pageYOffset;
+    const position = window.scrollY;
     setScrollPosition(position);
   };
 
   useEffect(() => {
     window.addEventListener('scroll', handleScroll, { passive: true });
     if (typeof window !== 'undefined') {
-      setScrollPosition(window.pageYOffset);
+      setScrollPosition(window.scrollY);
     }
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
   }, []);
 
   return (
