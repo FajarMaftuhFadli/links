@@ -18,7 +18,7 @@ export default function Links({ links }: { links: Link[] }) {
           <div className="flex flex-col gap-1">
             <div className="flex cursor-pointer items-center gap-1">
               <span className="text-lg font-semibold">{link.name}</span>
-              <span className="font-light lowercase text-blue/70">
+              <span className="font-light lowercase text-blue/80">
                 @{link.username} • 2d
               </span>
             </div>

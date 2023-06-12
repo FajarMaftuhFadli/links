@@ -89,7 +89,7 @@ export default function Header({ name }: HeaderProps) {
             }`}
           >
             <span className="text-lg font-bold">{name}</span>
-            <span className="text-sm font-light text-blue/70">{0} Links</span>
+            <span className="text-sm font-light text-blue/80">{0} Links</span>
           </div>
           {/* {scrollPosition} */}
         </div>

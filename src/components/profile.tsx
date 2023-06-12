@@ -48,13 +48,13 @@ export default function Profile({
         </div>
         <div>
           <h1 className="text-2xl font-bold">Fajar Maftuh Fadli</h1>
-          <span className="font-light text-blue/70">@froggologies</span>
+          <span className="font-light text-blue/80">@froggologies</span>
         </div>
         <span className="">
           {greeting} traveler. This one is a frog, hailing from the misty swamps
           of Black Marsh. 🐸 Croak! May the Hist guide your path!
         </span>
-        <div className="flex flex-col font-light text-blue/70">
+        <div className="flex flex-col font-light text-blue/80">
           <div className="flex flex-row items-center gap-1">
             <MapPin className="h-4 w-4" />
             <span>Middle Earth</span>
@@ -68,7 +68,7 @@ export default function Profile({
         </div>
         <div className="text-sm">
           <span className="font-semibold">{countedLink}</span>{' '}
-          <span className="font-light text-blue/70">Links</span>
+          <span className="font-light text-blue/80">Links</span>
         </div>
       </div>
     </div>
