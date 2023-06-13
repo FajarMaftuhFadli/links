@@ -11,6 +11,25 @@ export default function Links({ links }: { links: Link[] }) {
     return Math.floor(Math.random() * (max - min + 1) + min);
   };
 
+  function formatDate(dateString: string) {
+    const currentDate = moment();
+    const date = moment(dateString);
+
+    if (currentDate.diff(date, 'hours') < 24) {
+      if (currentDate.diff(date, 'hours') >= 1) {
+        return currentDate.diff(date, 'hours') + 'h';
+      } else if (currentDate.diff(date, 'minutes') >= 1) {
+        return currentDate.diff(date, 'minutes') + 'm';
+      } else {
+        return currentDate.diff(date, 'seconds') + 's';
+      }
+    } else if (currentDate.diff(date, 'days') === 1) {
+      return 'yesterday';
+    } else {
+      return date.format('DD MMM');
+    }
+  }
+
   return (
     <section className="flex w-full flex-col bg-crust">
       {links.map((link: Link) => (
@@ -38,7 +57,7 @@ export default function Links({ links }: { links: Link[] }) {
                   @{link.username}
                   {' • '}
                   <span className="capitalize">
-                    {moment(link._updatedAt).format('DD MMM')}
+                    {formatDate(link._updatedAt)}
                   </span>
                 </span>
               </div>
